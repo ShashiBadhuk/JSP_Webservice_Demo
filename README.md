@@ -20,7 +20,7 @@
  3) Google Gson Library
 
     Google Gson Library is required to encode & decode the JSON data
-    if you have not Google Gson library please download
+    if you have not Google Gson library please <a href="https://code.google.com/p/google-gson/downloads/detail?name=google-gson-2.2.4-release.zip&can=2&q=">download</a>
     
     Note : Add Google Gson Library to your classpath or add into the
     Apache Tomcat Library
