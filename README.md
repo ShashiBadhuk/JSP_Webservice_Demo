@@ -4,17 +4,21 @@
  * shashi1517@gmail.com
 
  ---------------------------------------------------------------------
- ---------------------------------------------------------------------
  Prerequisite :
  
  1) JRE
+
     make sure you have java installed in your server(or localhost)
+
     
  2) Apache Tomcat 
+
     Apache Tomcat is needed to host jsp file which is compatible to 
     above java version
+
     
  3) Google Gson Library
+
     Google Gson Library is required to encode & decode the JSON data
     if you have not Google Gson library please download
     
@@ -23,5 +27,4 @@
  
  Now you are ready to test. :) 
 
- ----------------------------------------------------------------------
  ----------------------------------------------------------------------
