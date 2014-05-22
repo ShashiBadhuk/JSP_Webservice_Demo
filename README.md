@@ -1,7 +1,8 @@
  * JSP Demo Webservice to Fetch Current Date
  * Shashi Badhuk
  * http://shashibadhuk.blogspot.com
- * shashibadhuk.developer@gmail.com
+ * shashi1517@gmail.com
+
  ---------------------------------------------------------------------
  ---------------------------------------------------------------------
  Prerequisite :
@@ -21,5 +22,6 @@
     Apache Tomcat Library
  
  Now you are ready to test. :) 
+
  ----------------------------------------------------------------------
  ----------------------------------------------------------------------
