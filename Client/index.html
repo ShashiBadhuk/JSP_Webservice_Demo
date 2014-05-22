@@ -1,0 +1,49 @@
+/* Client End File
+ * JSP Demo Webservice to Fetch Current Date
+ * Shashi Badhuk
+ * http://shashibadhuk.blogspot.com
+ * shashibadhuk.developer@gmail.com
+ */
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<script type="text/javascript">
+function createXMLHttpRequest(){
+  // See http://en.wikipedia.org/wiki/XMLHttpRequest
+  // Provide the XMLHttpRequest class for IE 5.x-6.x:
+  if( typeof XMLHttpRequest == "undefined" ) XMLHttpRequest = function() {
+    try { return new ActiveXObject("Msxml2.XMLHTTP.6.0") } catch(e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP.3.0") } catch(e) {}
+    try { return new ActiveXObject("Msxml2.XMLHTTP") } catch(e) {}
+    try { return new ActiveXObject("Microsoft.XMLHTTP") } catch(e) {}
+    throw new Error( "This browser does not support XMLHttpRequest." )
+  };
+  return new XMLHttpRequest();
+}
+
+var AJAX = createXMLHttpRequest();
+
+function controller() {
+  if(AJAX.readyState == 4 && AJAX.status == 200) {
+      var json = eval('(' + AJAX.responseText +')');
+      alert('Date => ' + json.date );
+  }else if (AJAX.readyState == 4 && AJAX.status != 200) {
+    alert('Oops...There is an Error.');
+  }
+}
+
+function show(){
+  var SERVER_URL = "http://localhost:8080/server/index.jsp";
+  //var SERVER_URL = "http://([IPAddress] or [Domain]):[PORT]/server/index.jsp";
+  AJAX.onreadystatechange = controller;
+  AJAX.open("GET", SERVER_URL);
+  AJAX.send("");
+};
+//Call show method to perform AJAX Request
+ show();
+</script>
+<body>
+</body>
+</html>
+
